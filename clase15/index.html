@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Dom Básico </h1>
+    <p id="parrafo1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus doloribus voluptatem repellendus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    
+    <script>
+        //GET ELEMENTS BY TAG NAME
+        let parrafos = document.getElementsByTagName("p");
+        console.log(parrafos);
+
+        //ACCEDO AL SEGUNDO PARRAFO EN ESPECIFICO- PRIMERO TENGO QUE TENER TODOS LOS PARRAFOS EN UN ARRAY CON LA FUNCION ESCRITA ARRIBA
+        let segundoParrafo = parrafos[1].innerHTML;
+        document.write(segundoParrafo);
+
+        parrafos[1].innerHTML = "Parrafo modificado";
+
+        //GET ELEMENT BY ID
+        let parrafoNuevo = document.getElementById("parrafo1");
+
+        document.getElementById("parrafo1").innerHTML = " Este es mi nuevo parrafo modificado desde GET ELEMENT BY ID";
+        document.getElementById("parrafo1").style.color = "red";
+
+        /*
+        let palabra = "palabra";
+        document.write("la palabra tiene: " + palabra.length + " letras");
+
+        document.write("<br> En la posicion 4 esta la letra " + palabra.substring(4,5));
+
+        //contar la cantidad de letras en una frase
+        let frase = "una frase cualquiera";
+        let cont = 0;
+
+        for (let i = 0; i < frase.length; i++) {
+            if(frase.substring(i,i+1) == "e") {
+                 cont++;
+            }      
+        }
+
+        document.write("<br> tiene " + cont + " veces <br>"); 
+        
+
+        let operacion = prompt("Que operación desea hacer?");
+
+        let num1 = parseFloat(prompt("Ingrese el primer numero"));
+        let num2 = parseFloat(prompt("Ingrese el segundo numero"));
+
+        function suma(num1, num2){
+            let resultado = num1 + num2;
+            return resultado;
+        }
+
+        function resta(num1, num2){
+            let resultado = num1 - num2;
+            return resultado;
+        }
+
+        function multiplicar(num1, num2){
+            let resultado = num1 * num2;
+            return resultado;
+        }
+
+        function dividir(num1, num2){
+            let resultado = null;
+            if(num2 != 0.0){
+                resultado = num1 / num2;
+            } else {
+                alert("ERROR: No se puede dividir por 0");
+            }
+            return resultado;
+        }
+
+        if(operacion == "suma") {
+            document.write(suma(num1, num2));
+        } else if (operacion == "resta") {
+            document.write(resta(num1, num2));
+        } else if (operacion == "multiplicar") {
+            document.write(multiplicar(num1, num2));
+        } else if (operacion == "dividir") {
+            document.write(dividir(num1, num2));
+        } else {
+            document.write("Flasheaste rey");
+        }*/
+
+
+
+
+    </script>
+
+</body>
+</html>

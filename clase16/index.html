@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title">Query selector</h2>
+
+    <div id="container1">
+        <div class="caja">Caja1</div>
+    </div>
+
+    <div id="container1">
+        <div class="caja">Caja2</div>
+    </div>
+
+    <div id="container1">
+        <div class="caja">Caja3</div>
+    </div>
+
+    <ul id="lista1">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+    </ul>
+
+    <ul id="lista2">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+    </ul>
+
+    <h1> DOM BASICO </h1>
+
+    <div id="cajaParaTitulo">
+        <p id="parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="parrafo2">Lorem ipsum dolor sit amet consectetur.</p>
+        <p id="parrafo3">Lorem ipsum dolor sit.</p>
+    </div>
+    
+    <!--METODO FILTER-->
+
+
+    <script>
+        //METODO FILTER
+        const numeros = [10,2,3,5,9,72,8];
+        //quiero un arreglo de numeros pares
+        //let numerosPares = [];
+        /*
+        // mediante un FOR
+        for (let i = 0; i < numeros.length; i++) {
+            if(numeros[i]%2 == 0){
+                numerosPares.push(numeros[i]);
+            }
+        }*/
+        /*
+        //METODO FILTER
+        let numeros_pares = numeros.filter(function(numero){
+            return numero%2==0;
+        })
+        console.log(numeros_pares);
+        */
+/*
+        //ES6 con ARROWFUNCTION
+        let lospares = numeros.filter(item => {
+            return item%2==0;
+        })
+        console.log(lospares);
+*/
+
+        //CON FILTER Y SPLIT ARMO UN ARRAY SOLO DE VOCALES
+        const frase = 'esta frase es muy larga';
+        const VOCALES = 'aeiou';
+        let vocalesDeLaFrase = frase.split('').filter(function(letra){
+            if(VOCALES.includes(letra)){
+                return letra;
+            }
+        });
+        console.log(vocalesDeLaFrase);
+
+        /*
+        //crear elemento
+        let nuevoElemento = document.createElement("h3");
+        //contenido
+        let nuevoContenido = document.createTextNode("Nuevo h3 creado desde JS");
+        //metemos el contenido en la etiqueta
+        nuevoElemento.appendChild(nuevoContenido);
+        //agregarle un estilo o formato
+        nuevoElemento.setAttribute("color" , "blue");
+        //introducir el elemento en el div correspondiente
+        //document.getElementById("cajaParaTitulo").appendChild(nuevoElemento);
+        
+        //como posicionarlo entre el p2 y p3
+        let parrafos = document.getElementsByTagName("p")[1];
+        parrafos.appendChild(nuevoElemento);
+
+        //COMO ELIMINAR AL PRIMER ELEMENTO 
+        let cajaMayor = document.getElementById("cajaParaTitulo");
+        cajaMayor.removeChild(document.getElementsByTagName("p")[0]);
+        //parrafos.removeChild(nuevoElemento);
+        */
+        /*
+        //ME TRAIGO TODOS LOS li DE AMBAS LISTAS
+        const ITEMS = document.querySelectorAll("li");
+        console.log(ITEMS);
+        //ACCEDER A ELEMENTOS DE LA SEGUNDA LISTA
+        const SEGUNDALISTA = document.querySelector("#lista2");
+        console.log(SEGUNDALISTA);
+        const ITEMSLISTADOS = SEGUNDALISTA.querySelectorAll("li");
+        console.log(ITEMSLISTADOS[1]);
+        */
+        /*
+        //acceder con query selector
+        const TITULO = document.querySelector("h2");
+        //query selector trae el primer elemento que encuentra con esa etiqueta
+        console.log(TITULO);
+
+        //acceder con query selector por ID
+        const TITULOPORID = document.querySelector("#title");
+        console.log(TITULOPORID);
+        */
+        //acceder con query selector por CLASS
+        /*
+        const CAJAPRIMERA = document.querySelector(".caja");
+
+        console.log(CAJAPRIMERA.innerHTML);*/
+
+        //ACCEDER AL ELEMENTO DEL CONTAINER2 CON QUERY SELECTOR
+        /* const CONTAINERSEGUNDO = document.querySelector("#container2");
+        const CAJADELSEGUNDO = CONTAINERSEGUNDO.querySelector(".caja");
+
+        console.log(CAJADELSEGUNDO.innerHTML);*/
+
+        /*
+        const CAJAS = document.querySelectorAll(".caja");
+        //cambio el color del segundo nodo
+        CAJAS[1].style.color = 'blue';
+
+        /*
+        for (let i = 0; i < CAJAS.length; i++) {
+            CAJAS[i].style.color = 'red';            
+        }
+
+        //ITERAR CON FOREACH
+        CAJAS.forEach((e) => {
+            //cada una de las cajas se va a llamar e
+            e.style.color = 'green';
+        });
+        */      
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    //Prompt por defecto ingresa strings
+        /*
+        let unaVaribale = prompt("Ingresa un numero");
+        let otraVariable = prompt("Ingresa otro numero");
+        let suma = unaVaribale + otraVariable;
+
+        document.write("El resultado es: " + suma);
+        /*
+        //Parseo el string a number
+        unaVaribale = Number(unaVaribale);
+        otraVariable = Number(otraVariable);
+
+        suma = unaVaribale + otraVariable;
+        document.write("El resultado es: " + suma);
+        */
+        /*
+        unaVaribale = parseInt(unaVaribale);
+        otraVariable = parseInt(otraVariable);
+
+        suma = unaVaribale + otraVariable;
+
+        document.write("El resultado es: " + suma);
+        */
+
+        /*
+        let palabra = "palabra";
+        //repetirla
+        let repetir = palabra.repeat(7);
+        document.write(repetir);
+
+        //reemplazar un string o una parte de un string por algo
+        console.log(palabra.replace("bra" , " "))
+        */
+
+        //iterar con matrices o arrays bidimensionales 
+
+        //diagonal principal
+        for ( i = 0 ; i < 5 ; i++){
+            document.write("<br>");
+            for ( j = 0 ; j < 5 ; j++) {
+                if( i == j ) {
+                    document.write("1");
+                } else {
+                    document.write("0");
+                }
+            }
+        }
+
+        //preguntar por numeros pares o impares
+        for ( i = 0; i < 10; i++){
+            if(i%2 == 0){
+                document.write(i + " es par")
+            }
+        }
+
+    </script>
+</body>
+</html>

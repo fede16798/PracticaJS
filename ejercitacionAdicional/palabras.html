@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
+/*
+let frase = prompt("Ingrese una frase");
+        let fraseSeparada = frase.split('');
+        let cont = 0;
+        for (let i = 0; i < fraseSeparada.length; i++) {
+            if(fraseSeparada[i] == "a"){
+                cont++;
+            }
+        }
+        document.write(cont);
+//Escribe un programa que pida una frase y escriba las vocales que aparecen
+//Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales
+        const VOCALES = 'aeiou';
+        let contadorVocales = 0;
+        let prueba = frase.split('').filter(item => {
+            if (VOCALES.includes(item)){
+                contadorVocales++;
+                return item;
+            }
+        })
+        document.write("<br>" + prueba);
+        document.write("<br>la cantidad de vocales son " +contadorVocales);
+//Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales
+        let contA = 0;
+        let contE = 0;
+        let contI = 0;
+        let contO = 0;
+        let contU = 0;
+
+        let pruebita = frase.split('').filter(letra =>{
+            if(VOCALES.includes(letra)){
+                switch(letra){
+                    case ("a"):
+                        contA++;
+                        break;
+                    case ("e"):
+                        contE++;
+                        break;
+                    case ("i"):
+                        contI++;
+                        break;
+                    case ("o"): 
+                        contO++;
+                        break;
+                    case("u"):
+                        contU++;
+                        break;
+                }
+            }
+        })
+
+        console.log("contador de A: " + contA);
+        console.log("contador de E: " + contE);
+        console.log("contador de I: " + contI);
+        console.log("contador de O: " + contO);
+        console.log("contador de U: " + contU);
+
+/*Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con 
+“cancelar” deben mostrarse todas las cadenas concatenadas con un guión */
+        let frase = prompt("Ingrese una frase");
+        let allPhrases = [];
+
+        while (frase != null) {
+            allPhrases.push(frase);
+            frase = prompt("Ingrese una frase");
+        }
+
+        document.write(allPhrases.join(" - "));
+    </script>
+</body>
+</html>

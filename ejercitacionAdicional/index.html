@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+//Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.
+        //alert("Hello World");
+
+//Escribe un programa de una sola línea que escriba en la pantalla un texto que diga“Hello World”
+        document.write("Hello World <br/> ");
+
+//Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5. 
+        document.write((3+5) + "<br>");
+
+//Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”
+        //let nombreUsuario = prompt("Ingrese su nombre por favor ");
+        //document.write("<br/> Hola " + nombreUsuario);
+
+//Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números.
+        //let num1 = parseInt(prompt("Ingrese el primer numero"));
+        //let num2 = parseInt(prompt("Ingrese el segundo numero"));
+        //document.write("<br> " + (num1 + num2));
+        document.write("<hr>");
+
+//Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
+        //num1>num2? document.write(num1) : document.write(num2);    
+        document.write("<hr>");
+
+//Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
+      /*  let num3 = parseInt(prompt("Ingrese el tercer numero"));
+        if(num1>num2 && num1>num3){
+            document.write(num1);
+        } else if (num2>num3){
+            document.write(num2);
+        } else {
+            document.write(num3);
+        }*/
+        document.write("<hr>");
+
+//Escribe un programa que pida un número y diga si es divisible por 2
+        //document.write("El numero " + (num1%2==0 ? "si " : "no ") + "divisible por 2");
+        document.write("<hr>");
+
+/*Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 
+(sólo hay que comprobar si lo es por uno de los cuatro)*/
+        const divisor2 = 2;
+        const divisor3 = 3;
+        const divisor5 = 5;
+        const divisor7 = 7;
+        let num = parseInt(prompt("Ingrese un numero"));
+        let esDivisible = false;
+
+        if(num%2 == 0){
+            document.write("El numero " + num + " es divisible por: " + divisor2);
+            esDivisible = true;
+        } else if (num%3 == 0 && !esDivisible){
+            document.write("El numero " + num + " es divisible por: " + divisor3);
+            esDivisible = true; 
+        } else if (num%divisor5 == 0 && !esDivisible){
+            document.write("El numero " + num + " es divisible por: " + divisor5);
+            esDivisible = true;
+        } else if (num%divisor7 == 0 && !esDivisible){
+            document.write("El numero " + num + " es divisible por: " + divisor7);
+            esDivisible = true;
+        } else {
+            document.write("El numero no es divisible ni por 2, 3 5 y 7");
+        }
+        document.write("<hr>");
+
+/*Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que
+decir todos por los que es divisible)*/
+        if(num%2 == 0){ 
+            document.write("<br>El numero " + num + " es divisible por: " + divisor2);
+        }
+        if (num%3 == 0){
+            document.write("<br>El numero " + num + " es divisible por: " + divisor3);
+        }
+        if (num%divisor5 == 0){
+            document.write("<br>El numero " + num + " es divisible por: " + divisor5);
+        }
+        if (num%divisor7 == 0){
+            document.write("<br>El numero " + num + " es divisible por: " + divisor7);
+        }
+        document.write("<hr>");
+
+//Escribir un programa que escriba en pantalla los divisores de un número dado
+        let divisores = [];
+        for (let i = 0; i <= num; i++) {
+            if(num%i == 0) {
+                divisores.push(i);
+            }
+        }
+        divisores.forEach(element => {
+            document.write("<br>El numero es divisible por " + element);
+        });
+        document.write("<hr>");
+
+//Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
+        let num2 = parseInt(prompt("Ingrese un segundo numero"));
+        let numeroMenor = 0;
+        num < num2? numeroMenor = num : numeroMenor = num2;
+        console.log(numeroMenor);
+        let cont = 0;
+        while (cont <= numeroMenor){
+            if((num%cont == 0) && (num2%cont == 0)){
+               document.write("<br>Los numeros " + num + " y " + num2 + " son divisbles por " + cont);
+            }
+            cont++;
+        }
+        document.write("<hr>");
+
+/*Escribir un programa que nos diga si un número dado es primo (no es divisible por
+ninguno otro número que no sea él mismo o la unidad)*/
+        let contador = 2;
+        let esPrimo = true;
+        if(num!=1){
+            while (!false && contador < num){
+                if(num % contador == 0){
+                    esPrimo = false;
+                } 
+                contador++;
+            }
+        } else {
+            esPrimo = false;
+        }
+        esPrimo == true? document.write("El numero " + num + " es primo"):document.write("El numero " + num + " NO es primo");
+        document.write("<hr>");
+/*Pide una nota (número). Muestra la calificación según la nota: 0-3 muy deficiente // 3-5 insuficiente //
+5-6 suficiente // 6-7 bien // 7-9 notable //9-10 sobresaliente*/
+        if (num >= 0 && num < 3) {
+            document.write("MUY DEFICIENTE");
+        } else if (num >= 3 && num < 4) {
+            document.write("INSUFICIENTE");
+        } else if (num >= 5 && num < 6) {
+            document.write("SUFICIENTE");
+        } else if (num >= 6 && num < 7) {
+            document.write("BIEN");
+        } else if (num >= 7 && num < 9) {
+            document.write("NOTABLE");
+        } else if (num >= 9 && num <= 10) {
+            document.write("SOBRESALIENTE");
+        } else {
+            document.write("Introduzca una nota entre 0 y 10");
+        }
+
+/*Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número
+deberá indicarse con un «alert» y seguir pidiendo. Al salir con “cancelar” deberá indicarse la
+suma total de los números introducidos.*/
+        alert("Arranca el ultimo script");
+
+    </script>
+</body>
+</html>
