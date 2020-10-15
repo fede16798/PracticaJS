@@ -189,3 +189,4 @@ const ultimoDiaDelMes = (dia,mes,ano) => {
     var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     return lastDay.getDate();
 }
+

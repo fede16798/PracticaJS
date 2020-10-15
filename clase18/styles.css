@@ -1,0 +1,28 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#app {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(195, 234, 247);
+    margin: 10px;
+    box-shadow: 3px 3px rgb(144, 150, 150);
+}
+
+p {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(12, 12, 99);
+}
